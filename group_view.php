@@ -1,0 +1,37 @@
+<?php
+
+if (empty($_GET['group_id'])) SHOW_ERROR(ERROR_ARGUMENTS);
+
+if (get_magic_quotes_gpc()) {
+	$_GET['group_id'] = stripslashes($_GET['group_id']);
+}
+
+$group_id = RETURN_ID_FROM($_GET['group_id']);
+CHECK_ID_EXIST($group_id, $ROWS, $ri);
+$row = &$ROWS[$ri];
+$rings = explode(',', $row[GROUP_RING]);
+
+HTML_HEADER('族群 #'.$group_id.': '.$row[GROUP_NAME]);
+MENU_BAR();
+
+VIEW_HEADER('族群 #'.$group_id);
+	VIEW_ROW('名稱', $row[GROUP_NAME]);
+	VIEW_ROW('案例', RETURN_GROUP_FAMILY_VIEW($rings, $RING_FAMILY_CASE));
+	VIEW_ROW('送修', RETURN_GROUP_FAMILY_VIEW($rings, $RING_FAMILY_REPAIR));
+	VIEW_ROW('標記', RETURN_GROUP_FAMILY_VIEW($rings, $RING_FAMILY_MARK));
+	VIEW_ROW('出借', RETURN_GROUP_FAMILY_VIEW($rings, $RING_FAMILY_LEND));
+	VIEW_ROW('出貨', RETURN_GROUP_FAMILY_VIEW($rings, $RING_FAMILY_SALE));
+	VIEW_ROW('外派', RETURN_GROUP_FAMILY_VIEW($rings, $RING_FAMILY_OUT));
+	VIEW_ROW('檔案', RETURN_GROUP_FAMILY_VIEW($rings, $RING_FAMILY_FILE));
+	VIEW_ROW('過期', RETURN_GROUP_FAMILY_VIEW($rings, $RING_FAMILY_EXPIRED));
+	VIEW_ROW('客戶', RETURN_GROUP_FAMILY_VIEW($rings, $RING_FAMILY_CLIENT));
+	VIEW_ROW('廠商', RETURN_GROUP_FAMILY_VIEW($rings, $RING_FAMILY_SUPPLIER));
+	VIEW_ROW('備品', RETURN_GROUP_FAMILY_VIEW($rings, $RING_FAMILY_STANDBY));
+	VIEW_ROW('歸類', RETURN_GROUP_FAMILY_VIEW($rings, $RING_FAMILY_CATEGORY));
+	VIEW_ROW('員工', RETURN_GROUP_FAMILY_VIEW($rings, $RING_FAMILY_STAFF));
+	VIEW_ROW('族群', RETURN_GROUP_FAMILY_VIEW($rings, $RING_FAMILY_GROUP));
+VIEW_FOOTER();
+
+HTML_OUTPUT();
+
+?>

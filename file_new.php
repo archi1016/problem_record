@@ -1,0 +1,14 @@
+<?php
+
+if (empty($THIS_STAFF_RINGS[RING_FILE_INSERT])) SHOW_ERROR(ERROR_NO_RING);
+
+HTML_HEADER('新增檔案');
+MENU_BAR();
+
+FORM_HEADER($THIS_PHP_FILE.'&op=insert', 'CHECK_NEW_FILE');
+	FORM_INPUT_TEXT('名稱', 'file_name', 64, '');
+FORM_FOOTER(TRUE, '新增');
+
+HTML_OUTPUT();
+
+?>

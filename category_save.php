@@ -1,0 +1,24 @@
+<?php
+
+if (empty($THIS_STAFF_RINGS[RING_CATEGORY_SAVE])) SHOW_ERROR(ERROR_NO_RING);
+if (empty($_GET['category_id'])) SHOW_ERROR(ERROR_ARGUMENTS);
+if (empty($_POST['category_name'])) SHOW_ERROR(ERROR_ARGUMENTS);
+
+if (get_magic_quotes_gpc()) {
+	$_GET['category_id'] = stripslashes($_GET['category_id']);
+	$_POST['category_name'] = stripslashes($_POST['category_name']);
+}
+
+$category_id = RETURN_ID_FROM($_GET['category_id']);
+CHECK_ID_EXIST($category_id, $ROWS, $ri);
+$row = &$ROWS[$ri];
+
+$row[CATEGORY_NAME] = $_POST['category_name'];
+
+if (DUMP_TEXT_TABLE($FILE_DB, $ROWS)) {
+	GOTO($THIS_PHP_FILE);
+} else {
+	SHOW_ERROR(ERROR_DUMP_FILE);
+}
+
+?>

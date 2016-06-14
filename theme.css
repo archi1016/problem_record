@@ -1,0 +1,351 @@
+body {
+	margin : 0 0 24px 0;
+	padding : 0;
+	font-family : 微軟正黑體, Verdana;
+	font-size : 12pt;
+	color : #000000;
+	background-color : #FFFFFF;
+}
+
+h1 {
+	margin : 0;
+	padding : 0 0 8px 8px;
+	font-size : 16pt;
+}
+
+input,select,textarea,table,button {
+	font-family : 微軟正黑體, Verdana;
+	font-size : 12pt;
+}
+
+img {
+	border-width : 0;
+}
+
+a {
+	text-decoration : none;
+}
+
+a:hover {
+	color : #CC0000;
+	text-decoration : underline;
+}
+
+form {
+	margin : 0;
+}
+
+form.single {
+	margin : 40px 0 0 0;
+}
+
+form textarea.w {
+	width : 600px;
+}
+
+form input.w {
+	width : 600px;
+}
+
+div.error {
+	padding : 32px;
+	color : #AA3333;
+	background-color : #FFE0E0;
+	font-weight : bold;
+	font-size : 20pt;
+	border-style : solid;
+	border-width : 0 0 2px 0;
+	border-color : #AA3333;
+}
+
+div.menu {
+	padding : 8px 0 0 0;
+	background-color : #DCE6F1;
+}
+
+div.menu table {
+	width : 100%;
+	margin : 0;
+	border-width : 0;
+	height : 36px;
+}
+
+div.menu td {
+	padding : 4px 0 0 0;
+	border-width : 2px 0;
+	border-color : #DCE6F1 #DCE6F1 #95B3D7 #DCE6F1;
+	text-align : right;
+}
+
+div.menu td.tab {
+	width : 52px;
+	text-align : center;
+}
+
+div.menu td.current {
+	width : 48px;
+	text-align : center;
+	border-width : 2px;
+	border-color : #95B3D7 #95B3D7 #FFFFFF #95B3D7;
+	background-color : #FFFFFF;
+	font-weight : bold;
+}
+
+div.more {
+	margin : 16px auto 0 auto;
+	width : 920px;
+	padding : 0 8px;
+}
+
+div.pages {
+	margin : 16px auto 0 auto;
+	width : 920px;
+	text-align : left;
+	border-style : dashed;
+	border-width : 0 0 1px 0;
+	border-color : #ACA899;
+}
+
+div.pages a {
+	padding : 0 0 0 16px;
+}
+
+div.pages span {
+	padding : 0 0 0 16px;
+}
+
+div.page_nav {
+	margin : 16px auto 0 auto;
+	width : 920px;
+	text-align : right;
+}
+
+div.page_nav a {
+	padding : 0 16px 0 0;
+}
+
+div.page_nav span {
+	padding : 0 16px 0 0;
+}
+
+span.cost {
+	color : #CC0000;
+}
+
+span.more {
+	padding : 0 0 0 12px;
+	color : #888888;
+	font-size : 12pt;
+}
+
+span.unchecked {
+	margin : 0 4px 0 0;
+	padding : 0 2px;
+	cursor : pointer;
+	border-style : solid;
+	border-width : 1px;
+	border-color : #FFFFFF;
+}
+
+span.checked {
+	margin : 0 4px 0 0;
+	padding : 0 2px;
+	cursor : pointer;
+	background-color : #FFE0E0;
+	border-style : solid;
+	border-width : 1px;
+	border-color : #AA3333;
+}
+
+table {
+	margin : 24px auto 0 auto;
+	width : 920px;
+	border-style : solid;
+	border-width : 1px 1px 0 1px;
+	border-color : #ACA899;
+}
+
+table th {
+	text-align : left;
+	padding : 4px 0 0 8px;
+	background-color : #ECE9D8;
+	border-style : solid;
+	border-width : 1px 1px 1px 0;
+	border-color : #FFFFFF #716F64 #716F64 #716F64;
+}
+
+table td {
+	text-align : left;
+	padding : 4px 8px;
+	border-style : solid;
+	border-width : 0 0 1px 0;
+	border-color : #ACA899;
+}
+
+table div.content {
+	padding : 4px 0 8px 0;
+	font-size : 14pt;
+	border-style : solid;
+	border-width : 0 0 1px 0;
+	border-color : #ACA899;
+}
+
+table div.reply {
+	margin : 8px 0 0 0;
+	padding : 8px 0 0 0;
+	border-style : solid;
+	border-width : 1px 0 0 0;
+	border-color : #ACA899;
+}
+
+table p {
+	margin : 8px 0 0 0;
+	padding : 0 8px;
+	border-style : solid;
+	border-width : 0 0 0 4px;
+	border-color : #ACA899;
+	font-size : 14pt;
+}
+
+p table.attachments {
+	width : 90%;
+}
+
+table div.sub  {
+	padding : 2px 0 0 12px;
+	color : #888888;
+}
+
+table div.phone {
+	color : #AA3333;
+	font-size : 24pt;
+	font-weight : bold;
+}
+
+table div.ip {
+	color : #AA33AA;
+	font-size : 20pt;
+	font-weight : bold;
+}
+
+table th.item {
+	width : 160px;
+}
+
+table th.value {
+	border-width : 1px 0 1px 0;
+}
+
+table th.id {
+	width : 40px;
+}
+
+table th.op {
+	width : 114px;
+}
+
+table th.last {
+	border-width : 1px 0 1px 0;
+	width : 176px;
+}
+
+table th.key {
+	color : #AA2200;
+}
+
+table th.title {
+	text-align : center;
+	font-size : 20pt;
+	border-width : 1px 0 1px 0;
+	color : #3366CC;
+}
+
+table td.info {
+	width : 160px;
+}
+
+table td.lab {
+	width : 160px;
+	text-align : right;
+	font-size : 14pt;
+	font-weight : bold;
+	color : #338844;
+}
+
+table td.content {
+	font-size : 14pt;
+}
+
+table dl {
+	margin : 8px 0 0 0;
+}
+
+table dt {
+	font-weight : bold;
+}
+
+table dd {
+	margin : 0 0 0 12px;
+	padding : 0 0 12px 0;
+}
+
+table div.id {
+	font-weight : bold;
+	font-size : 40pt;
+}
+
+table div.mark {
+	margin : 4px 8px 4px 0;
+	padding : 4px;
+	float : left;
+	width : 186px;
+	height : 32px;
+	font-size : 12pt;
+	border-style : solid;
+	border-width : 1px 1px 1px 4px;
+	border-color : #ACA899;
+}
+
+a.op {
+
+}
+
+table.attachments {
+	margin : 0;
+	width : 100%;
+	border-width  :0;
+}
+
+table.attachments td {
+	border-width : 0;
+	padding : 4px;
+}
+
+table.attachments td.icon {
+	width : 56px;
+}
+
+table.sale {
+	margin : 0;
+	width : 100%;
+}
+
+table.linked {
+	margin : 0;
+	width : 100%;
+	border-width  :0;
+}
+
+table.linked td {
+	border-width : 0;
+	padding : 4px;
+}
+
+table.linked td.icon {
+	width : 120px;
+	text-align : right;
+}
+
+table.linked img {
+	margin : 0 0 0 8px;
+}
